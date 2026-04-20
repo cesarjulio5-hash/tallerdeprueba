@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    background: #fdf6f9;
+    background: #eaf6ff;
 }
 
 .container {
@@ -9,55 +9,64 @@ body {
 }
 
 header {
-    background: #d63384;
+    background: #0077b6;
     color: white;
     padding: 20px;
 }
 
-header h1 {
-    margin: 0;
+main {
+    padding: 20px;
 }
 
-.perfumes {
+h2 {
+    color: #023e8a;
+}
+
+.doctores {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    padding: 20px;
 }
 
 .card {
     background: white;
-    margin: 15px;
+    margin: 10px;
     padding: 15px;
     border-radius: 10px;
-    width: 250px;
+    width: 200px;
     box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
 }
 
-.card img {
-    width: 100%;
-    border-radius: 10px;
+.formulario form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.card h3 {
-    margin: 10px 0;
+.formulario input {
+    margin: 8px;
+    padding: 10px;
+    width: 250px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
 }
 
-.card button {
-    background: #ff4da6;
+button {
+    background: #00b4d8;
     color: white;
     border: none;
-    padding: 10px;
+    padding: 12px;
+    margin-top: 10px;
     border-radius: 5px;
     cursor: pointer;
 }
 
-.card button:hover {
-    background: #e60073;
+button:hover {
+    background: #0096c7;
 }
 
 footer {
-    background: #222;
+    background: #023e8a;
     color: white;
     padding: 10px;
     margin-top: 20px;
