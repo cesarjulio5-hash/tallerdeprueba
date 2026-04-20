@@ -1,70 +1,64 @@
-/* Reset básico */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Body */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #c3ec52, #0ba360);
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f4f4f4;
 }
 
-/* Contenedor */
 .container {
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.4);
-    padding: 40px;
-    border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
 }
 
-/* Header */
+header {
+    background: #1e90ff;
+    color: white;
+    padding: 20px;
+}
+
 header h1 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
+    margin: 0;
 }
 
-header p {
-    font-size: 1.2em;
-    margin-bottom: 30px;
+.autos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
 }
 
-/* Main */
-main p {
-    margin: 20px 0;
-    font-size: 1.2em;
-}
-
-.icon {
-    width: 80px;
-    margin-bottom: 20px;
-}
-
-button {
-    padding: 12px 25px;
-    font-size: 1em;
-    background-color: #ffbb33;
-    color: #333;
-    border: none;
+.card {
+    background: white;
+    margin: 15px;
+    padding: 15px;
     border-radius: 10px;
+    width: 250px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.card h3 {
+    margin: 10px 0;
+}
+
+.card button {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
     cursor: pointer;
-    transition: 0.3s;
 }
 
-button:hover {
-    background-color: #ffdd66;
+.card button:hover {
+    background: #218838;
 }
 
-/* Footer */
 footer {
-    margin-top: 30px;
-    font-size: 0.9em;
-    color: #eee;
+    background: #222;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
 }
