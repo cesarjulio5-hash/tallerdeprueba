@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    background: #eaf6ff;
+    background: #f1fff3;
 }
 
 .container {
@@ -9,7 +9,7 @@ body {
 }
 
 header {
-    background: #0077b6;
+    background: #2b9348;
     color: white;
     padding: 20px;
 }
@@ -18,11 +18,17 @@ main {
     padding: 20px;
 }
 
-h2 {
-    color: #023e8a;
+/* BUSCADOR */
+#buscador {
+    padding: 10px;
+    width: 250px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
 }
 
-.doctores {
+/* PRODUCTOS */
+.productos {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -37,36 +43,32 @@ h2 {
     box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
 }
 
-.formulario form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+/* CARRITO */
+.carrito {
+    margin-top: 30px;
 }
 
-.formulario input {
-    margin: 8px;
-    padding: 10px;
-    width: 250px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+ul {
+    list-style: none;
+    padding: 0;
 }
 
 button {
-    background: #00b4d8;
+    background: #55a630;
     color: white;
     border: none;
-    padding: 12px;
+    padding: 10px 15px;
     margin-top: 10px;
     border-radius: 5px;
     cursor: pointer;
 }
 
 button:hover {
-    background: #0096c7;
+    background: #40916c;
 }
 
 footer {
-    background: #023e8a;
+    background: #1b4332;
     color: white;
     padding: 10px;
     margin-top: 20px;
