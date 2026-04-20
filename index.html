@@ -3,71 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clínica Dental Sonrisa</title>
+    <title>SuperMarket Express</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
 
-        <header>
-            <h1>🦷 Clínica Dental Sonrisa</h1>
-            <p>Cuidamos tu salud bucal con profesionales expertos</p>
-        </header>
+<div class="container">
 
-        <main>
+    <header>
+        <h1>🛒 SuperMarket Express</h1>
+        <p>Compra fácil y rápido</p>
+    </header>
 
-            <!-- SERVICIOS -->
-            <section>
-                <h2>Servicios</h2>
-                <p><strong>Limpieza • Ortodoncia • Blanqueamiento • Implantes</strong></p>
-            </section>
+    <main>
 
-            <!-- DOCTORES -->
-            <section class="doctores">
-                <h2>Nuestros Especialistas</h2>
+        <!-- BUSCADOR -->
+        <input type="text" id="buscador" placeholder="Buscar producto..." onkeyup="buscarProducto()">
 
-                <div class="card">
-                    <h3>Dra. Ana López</h3>
-                    <p>Ortodoncia</p>
-                </div>
+        <!-- PRODUCTOS -->
+        <section class="productos" id="listaProductos">
 
-                <div class="card">
-                    <h3>Dr. Carlos Pérez</h3>
-                    <p>Implantes Dentales</p>
-                </div>
-            </section>
+            <div class="card">
+                <h3>🍎 Manzana</h3>
+                <p>$2</p>
+                <button onclick="agregar('Manzana', 2)">Agregar</button>
+            </div>
 
-            <!-- FORMULARIO -->
-            <section class="formulario">
-                <h2>Reservar Cita</h2>
-                <form onsubmit="event.preventDefault(); alert('Cita reservada con éxito 🗓️');">
-                    <input type="text" placeholder="Nombre completo" required>
-                    <input type="email" placeholder="Correo electrónico" required>
-                    <input type="date" required>
-                    <button type="submit">Agendar</button>
-                </form>
-            </section>
+            <div class="card">
+                <h3>🥛 Leche</h3>
+                <p>$1.5</p>
+                <button onclick="agregar('Leche', 1.5)">Agregar</button>
+            </div>
 
-            <!-- UBICACIÓN -->
-            <section>
-                <h2>Ubicación</h2>
-                <p>📍 Av. Principal #123, Ciudad</p>
-            </section>
+            <div class="card">
+                <h3>🍞 Pan</h3>
+                <p>$1</p>
+                <button onclick="agregar('Pan', 1)">Agregar</button>
+            </div>
 
-            <!-- CONTACTO -->
-            <section>
-                <h2>Contacto</h2>
-                <button onclick="alert('Redirigiendo a WhatsApp 📱')">
-                    Contactar por WhatsApp
-                </button>
-            </section>
+        </section>
 
-        </main>
+        <!-- CARRITO -->
+        <section class="carrito">
+            <h2>🧾 Carrito</h2>
+            <ul id="carritoLista"></ul>
+            <p>Total: $<span id="total">0</span></p>
+            <button onclick="pagar()">Pagar</button>
+        </section>
 
-        <footer>
-            <p>© 2026 Clínica Dental Sonrisa</p>
-        </footer>
+    </main>
 
-    </div>
+    <footer>
+        <p>© 2026 SuperMarket Express</p>
+    </footer>
+
+</div>
+
+<script>
+    let total = 0;
+
+    function agregar(nombre, precio) {
+        let lista = document.getElementById("carritoLista");
+        let item = document.createElement("li");
+        item.textContent = nombre + " - $" + precio;
+        lista.appendChild(item);
+
+        total += precio;
+        document.getElementById("total").textContent = total.toFixed(2);
+    }
+
+    function pagar() {
+        if (total === 0) {
+            alert("El carrito está vacío");
+        } else {
+            alert("Pago realizado con éxito 💳 Total: $" + total.toFixed(2));
+            location.reload();
+        }
+    }
+
+    function buscarProducto() {
+        let input = document.getElementById("buscador").value.toLowerCase();
+        let productos = document.querySelectorAll(".card");
+
+        productos.forEach(producto => {
+            let texto = producto.textContent.toLowerCase();
+            producto.style.display = texto.includes(input) ? "block" : "none";
+        });
+    }
+</script>
+
 </body>
 </html>
