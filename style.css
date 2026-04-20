@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    background: #f4f4f4;
+    background: #fdf6f9;
 }
 
 .container {
@@ -9,7 +9,7 @@ body {
 }
 
 header {
-    background: #1e90ff;
+    background: #d63384;
     color: white;
     padding: 20px;
 }
@@ -18,7 +18,7 @@ header h1 {
     margin: 0;
 }
 
-.autos {
+.perfumes {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -44,7 +44,7 @@ header h1 {
 }
 
 .card button {
-    background: #28a745;
+    background: #ff4da6;
     color: white;
     border: none;
     padding: 10px;
@@ -53,7 +53,7 @@ header h1 {
 }
 
 .card button:hover {
-    background: #218838;
+    background: #e60073;
 }
 
 footer {
